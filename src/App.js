@@ -36,6 +36,7 @@ class App extends Component {
     return (
       <div style={divStyle}>
         <h1>{this.state.pageTitle}</h1> 
+        {/* <h1>TESTING</h1> */}
 
         <input type="text" onChange={this.handleInput} />
 
@@ -58,10 +59,6 @@ class App extends Component {
        year={cars[2].year}
        onChangeTitle={() => this.changeTitleHandler(cars[2].name)}
 
-       
-
-
-       
       />
     </div>
       
