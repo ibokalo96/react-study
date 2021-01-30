@@ -2,6 +2,7 @@ import { Component } from 'react';
 import './App.css';
 import Car from './Car/Car'
 import ErrorBoundry from'./ErorBoundery/ErorBoundery'
+import Counter from './Counter/Counter'
 
 class App extends Component {
 
@@ -68,6 +69,7 @@ class App extends Component {
           <Car 
             name={car.name}
             year={car.year}
+            index={index}
             onDelete={this.deleteHandler.bind(this, index)}
             onChangeName={event => this.onChangeName(event.target.value, index)}
           />
@@ -81,12 +83,14 @@ class App extends Component {
         {/* <h1>{this.state.pageTitle}</h1>  */}
         <h1>{this.props.title}</h1>
 
+        <Counter />
+        <hr/>
         <button
+        style={{marginTop:20}}
          onClick={this.toggleCarsHandler}
         >Toggle cars</button>
 
         <div style={{
-
           width: 400,
           margin: 'auto',
           paddingTop:'20px'
